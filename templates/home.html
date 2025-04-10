@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>漢方処方ナビ - トップページ</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+    }
+    header {
+      background-color: #3b8070;
+      color: white;
+      padding: 1.5em 1em;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 1.8em;
+    }
+    main {
+      max-width: 600px;
+      margin: 2em auto;
+      background: white;
+      padding: 2em;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+    img.logo {
+      max-width: 120px;
+      margin-bottom: 1em;
+    }
+    .button {
+      display: inline-block;
+      margin-top: 2em;
+      background-color: #3b8070;
+      color: white;
+      padding: 0.75em 1.5em;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .button:hover {
+      background-color: #2e665a;
+    }
+    .notice {
+      margin-top: 2em;
+      color: #a94442;
+      font-size: 0.9em;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>漢方処方ナビ</h1>
+  </header>
+  <main>
+    <img src="/static/logo.png" alt="ロゴイラスト" class="logo">
+    <p>症状、所見から適した漢方薬を提案します。</p>
+    <a href="/form" class="button">診断をはじめる</a>
+
+    <div class="notice">
+      <p><strong>注意！</strong></p>
+      <p>本アプリの結果はあくまでAIの予測ですので、参考程度に使用してください。<br>
+      実際の処方はご自身での最終判断の上、ご自身の責任のもので行ってください。</p>
+    </div>
+  </main>
+</body>
+</html>

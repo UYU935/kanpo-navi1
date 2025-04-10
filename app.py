@@ -4,7 +4,11 @@ from gpt_utils import generate_kanpo_response
 app = Flask(__name__)
 
 @app.route("/")
-def index():
+def home():
+    return render_template("home.html")  # ← 今作ったHTMLを home.html として保存
+
+@app.route("/form")
+def form():
     return render_template("index.html")
 
 @app.route("/result", methods=["POST"])

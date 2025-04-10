@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>漢方処方ナビ</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      margin: 2em;
+      background-color: #f9f9f9;
+    }
+    label {
+      display: block;
+      margin-top: 1em;
+      font-weight: bold;
+    }
+    input[type="text"], input[type="number"], textarea, select {
+      width: 100%;
+      padding: 0.5em;
+      margin-top: 0.5em;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    .checkbox-group {
+      margin-left: 1em;
+    }
+    input[type="submit"] {
+      margin-top: 2em;
+      padding: 1em;
+      background-color: #007BFF;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      font-size: 1em;
+      cursor: pointer;
+    }
+    input[type="submit"]:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+  <h1>漢方処方ナビ</h1>
+  <form method="POST" action="/result">
+    <label>年齢:</label>
+    <input type="number" name="age" required>
+
+    <label>性別:</label>
+    <select name="gender" required>
+      <option value="女性">女性</option>
+      <option value="男性">男性</option>
+      <option value="その他">その他</option>
+    </select>
+
+    <label>主訴:</label>
+    <textarea name="main_complaint" rows="3" required></textarea>
+
+    <label>付随する症状（複数選択可）:</label>
+    <div class="checkbox-group">
+      <input type="checkbox" name="symptoms" value="発熱"> 発熱<br>
+      <input type="checkbox" name="symptoms" value="頭痛"> 頭痛<br>
+      <input type="checkbox" name="symptoms" value="不眠"> 不眠<br>
+      <input type="checkbox" name="symptoms" value="めまい"> めまい<br>
+      <input type="checkbox" name="symptoms" value="耳鳴"> 耳鳴<br>
+      <input type="checkbox" name="symptoms" value="しびれ"> しびれ<br>
+      <input type="checkbox" name="symptoms" value="動悸"> 動悸<br>
+      <input type="checkbox" name="symptoms" value="息切れ"> 息切れ<br>
+      <input type="checkbox" name="symptoms" value="腹痛"> 腹痛<br>
+      <input type="checkbox" name="symptoms" value="下痢"> 下痢<br>
+      <input type="checkbox" name="symptoms" value="便秘"> 便秘<br>
+      <input type="checkbox" name="symptoms" value="ほてり"> ほてり<br>
+      <input type="checkbox" name="symptoms" value="冷え"> 冷え<br>
+      <input type="checkbox" name="symptoms" value="むくみ"> むくみ<br>
+      <input type="checkbox" name="symptoms" value="生理症状"> 生理症状<br>
+    </div>
+    <label>その他の症状:</label>
+    <input type="text" name="other_symptoms">
+
+    <label>舌診（複数選択可）:</label>
+    <div class="checkbox-group">
+      <input type="checkbox" name="tongue" value="正常"> 正常<br>
+      <input type="checkbox" name="tongue" value="発赤"> 発赤<br>
+      <input type="checkbox" name="tongue" value="蒼白"> 蒼白<br>
+      <input type="checkbox" name="tongue" value="腫大"> 腫大<br>
+      <input type="checkbox" name="tongue" value="圧痕"> 圧痕<br>
+      <input type="checkbox" name="tongue" value="委縮"> 委縮<br>
+      <input type="checkbox" name="tongue" value="乾燥"> 乾燥<br>
+      <input type="checkbox" name="tongue" value="平滑"> 平滑<br>
+      <input type="checkbox" name="tongue" value="地図状"> 地図状<br>
+      <input type="checkbox" name="tongue" value="舌苔過多"> 舌苔過多<br>
+      <input type="checkbox" name="tongue" value="黒毛舌"> 黒毛舌<br>
+      <input type="checkbox" name="tongue" value="舌下静脈怒張"> 舌下静脈怒張<br>
+      <input type="checkbox" name="tongue" value="舌診なし"> 舌診なし<br>
+    </div>
+    <label>その他の舌診所見:</label>
+    <input type="text" name="other_tongue">
+
+    <label>腹診（複数選択可）:</label>
+    <div class="checkbox-group">
+      <input type="checkbox" name="abdomen" value="腹壁弛緩"> 腹壁弛緩<br>
+      <input type="checkbox" name="abdomen" value="腹壁硬直"> 腹壁硬直<br>
+      <input type="checkbox" name="abdomen" value="胸脇苦満"> 胸脇苦満<br>
+      <input type="checkbox" name="abdomen" value="臍上悸"> 臍上悸<br>
+      <input type="checkbox" name="abdomen" value="圧痛"> 圧痛<br>
+      <input type="checkbox" name="abdomen" value="腹診なし"> 腹診なし<br>
+    </div>
+    <label>その他の腹診所見:</label>
+    <input type="text" name="other_abdomen">
+
+    <input type="submit" value="診断する">
+  </form>
+</body>
+</html>

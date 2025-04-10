@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>診断結果 - 漢方処方ナビ</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      margin: 2em;
+      background-color: #f4f4f4;
+    }
+    .container {
+      background: white;
+      padding: 2em;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    h1 {
+      color: #333;
+    }
+    pre {
+      white-space: pre-wrap;
+      background-color: #f0f0f0;
+      padding: 1em;
+      border-radius: 5px;
+    }
+    a {
+      display: inline-block;
+      margin-top: 1.5em;
+      color: #007BFF;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>診断結果</h1>
+    <pre>{{ result | e }}</pre>
+    <a href="/">もう一度診断する</a>
+  </div>
+</body>
+</html>

@@ -22,7 +22,7 @@ def result():
         "tongue": request.form.getlist("tongue"),
         "other_tongue": request.form.get("other_tongue"),
         "abdomen": request.form.getlist("abdomen"),
-        "other_abdomen": request.form.get("other_abdomen")
+        "other_abdomen": request.form.get("other_abdomen"),
         "period": request.form.get("period")
     }
 

@@ -17,6 +17,7 @@ def generate_kanpo_response(data):
 年齢: {data['age']}
 性別: {data['gender']}
 主訴: {data['main_complaint']}
+発症からの期間：{data['period']}
 付随する症状: {', '.join(data['symptoms'])} {data['other_symptoms']}
 舌診: {', '.join(data['tongue'])} {data['other_tongue']}
 腹診: {', '.join(data['abdomen'])} {data['other_abdomen']}
